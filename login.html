@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <style>
+    body {
+      background-color: brown;
+    }
+
+    .box {
+      display: flex;
+      height: 500px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      padding: 10%;
+      background-color: #ffdab9;
+    }
+
+    input {
+      margin-bottom: 20px;
+      height: 25px;
+      outline: none;
+      border: none;
+    }
+
+    button {
+      height: 30px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <form action="">
+      <input type="text" id="name" placeholder="请输入姓名">
+      <input type="text" id="date" placeholder="请输入日期">
+      <button>登录</button>
+    </form>
+  </div>
+  <script>
+    document.querySelector('button').addEventListener('click', (e) => {
+      e.preventDefault()
+      const name = document.querySelector('#name')
+      const date = document.querySelector('#date')
+      if (name.value === '刘若兰' && date.value === '20240709') {
+        location.href = './birthday.html'
+      } else {
+        alert('登录失败')
+      }
+    })
+  </script>
+</body>
+
+</html>
